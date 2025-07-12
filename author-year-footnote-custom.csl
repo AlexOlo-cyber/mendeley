@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0">
+  <info>
+    <title>Author-Year Footnote (Smith 2000, 10–15)</title>
+    <id>http://www.zotero.org/styles/author-year-footnote-custom</id>
+    <link href="http://www.zotero.org/styles/author-year-footnote-custom" rel="self"/>
+    <author>
+      <name>Custom CSL for Alex</name>
+    </author>
+    <category citation-format="note"/>
+    <updated>2025-07-12T00:00:00+00:00</updated>
+  </info>
+  <citation>
+    <layout delimiter="; ">
+      <text variable="author" suffix=" "/>
+      <text variable="issued" prefix="" suffix=", " form="year"/>
+      <text variable="page"/>
+    </layout>
+  </citation>
+  <bibliography>
+    <layout>
+      <text macro="author"/>
+      <text macro="issued" prefix=" (" suffix=")."/>
+      <text macro="title" prefix=" " suffix="."/>
+      <text macro="container-title" prefix=" " suffix=","/>
+      <text variable="publisher" prefix=" " suffix=","/>
+      <text variable="page" prefix=" " suffix="."/>
+    </layout>
+    <macro name="author">
+      <names variable="author">
+        <name form="long" and="text" delimiter=", "/>
+      </names>
+    </macro>
+    <macro name="issued">
+      <date variable="issued">
+        <date-part name="year"/>
+      </date>
+    </macro>
+    <macro name="title">
+      <text variable="title"/>
+    </macro>
+    <macro name="container-title">
+      <text variable="container-title"/>
+    </macro>
+  </bibliography>
+</style>
